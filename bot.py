@@ -7,20 +7,6 @@ from threading import Thread
 import os
 
 # -------------------
-# 24/7 Web server to keep Replit awake
-# -------------------
-app = Flask('')
-
-@app.route('/')
-def home():
-    return "Bot is alive!"
-
-def run():
-    app.run(host='0.0.0.0', port=8080)
-
-Thread(target=run).start()
-
-# -------------------
 # Discord bot setup
 # -------------------
 intents = discord.Intents.default()
@@ -98,4 +84,5 @@ async def on_member_update(before, after):
 # Run bot
 # -------------------
 bot.run(os.getenv("DISCORD_TOKEN"))
+
 
