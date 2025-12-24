@@ -1,3 +1,5 @@
+from dotenv import load_dotenv
+load_dotenv()
 import discord
 from discord.ext import commands
 from flask import Flask
@@ -96,3 +98,4 @@ async def on_member_update(before, after):
 # Run bot
 # -------------------
 bot.run(os.getenv("DISCORD_TOKEN"))
+
